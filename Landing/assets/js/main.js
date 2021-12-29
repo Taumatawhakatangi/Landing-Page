@@ -86,14 +86,22 @@ scrollUp.addEventListener('click', () => {
 
 jQuery(function ($) {
 
+  // burger 
+
+  $('.burger').click(function() {
+    $('.burger span').toggleClass('active');
+    
+  })
+
+
   // preloader
 
-$(window).on('load', function () {
-      $('#preloader-active').delay(450).fadeOut('slow');
-      $('body').delay(450).css({
-        'overflow': 'visible'
+  $(window).on('load', function () {
+        $('#preloader-active').delay(450).fadeOut('slow');
+        $('body').delay(450).css({
+          'overflow': 'visible'
+        });
       });
-    });
 
   // fade 
 

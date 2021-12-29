@@ -63,9 +63,13 @@ body {
 
 img {
 	max-width: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	transition: all .5s ease;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 button, input, textarea, select {
@@ -96,7 +100,10 @@ input:focus {
 }
 
 label {
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 button {
@@ -116,6 +123,8 @@ a {
 }
 
 textarea {
+	box-shadow: none;
+	border-radius: 0;
 	resize: none;
 	min-width: ;
 	min-height: ;
@@ -135,7 +144,6 @@ textarea:focus {
 
 body::-webkit-scrollbar {             /*ширина скролбара*/
 	width: ;
-}
  
 body::-webkit-scrollbar-track {       /*дорожка по котороый ездит ползунок*/
 	background: ;
@@ -149,6 +157,11 @@ body::-webkit-scrollbar-thumb {       /*сам ползунок*/
 }
 
 /*scrollbar*/
+
+::-moz-selection {
+	background: #6E9C9F;
+	color: #fff;
+}
 
 ::selection {
 	background: #6E9C9F;
@@ -235,6 +248,36 @@ body::-webkit-scrollbar-thumb {       /*сам ползунок*/
 	background: #2F8A8F;
 }
 
+/* burger */
+
+.burger {
+	width: 35px;
+	height: 25px;
+}
+
+.burger span {
+  border-radius: 10px;
+	margin-bottom: 5px;
+  display: block;
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+  transition: 0.4s;
+}
+
+.burger__middle.active {
+	opacity: 0;
+}
+
+.burger__top.active {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.burger__bottom.active {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
 /*header*/
 
 .header {
@@ -249,6 +292,7 @@ body::-webkit-scrollbar-thumb {       /*сам ползунок*/
 
 .footer {
 	margin-top: auto;
+}
 }
 
 
